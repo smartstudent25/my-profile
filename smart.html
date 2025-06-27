@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Interaction</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Smart Profile</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="fun.html">Fun</a></li>
+          <li class="nav-item"><a class="nav-link active" href="smart.html">Smart</a></li>
+        </ul>
+        <button id="theme-toggle" class="btn btn-outline-light ms-3">Toggle Theme</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container py-5">
+    <h2 class="mb-4">Smart Interaction Page</h2>
+
+    <div class="mb-3">
+      <label for="nameInput" class="form-label">Type Your Name:</label>
+      <input type="text" id="nameInput" class="form-control" placeholder="Your name..." />
+    </div>
+    <h3 id="greetingMessage">Hello, guest!</h3>
+
+    <hr />
+
+    <div
+      id="hoverBox"
+      class="p-4 mt-4 text-center"
+      style="background-color: #f1f1f1; cursor: pointer; border-radius: 8px;"
+    >
+      Hover over this box!
+    </div>
+
+    <div class="text-center mt-4">
+      <button id="animateBtn" class="btn btn-primary">Click to Animate</button>
+      <div id="animatedBox" class="mt-3 p-3 bg-secondary text-white" style="display: none;">
+        I'm animated!
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

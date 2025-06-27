@@ -1,0 +1,212 @@
+/* style.css */
+
+/* ----------- Color Variables ----------- */
+:root {
+  --bg-light: #f5f5f5;
+  --bg-dark: #121212;
+  --text-light: #333;
+  --text-dark: #e0e0e0;
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --accent-color: #ff6b6b;
+  --bg-gradient: linear-gradient(to right, #74ebd5, #ACB6E5);
+}
+
+/* ----------- Global Styles ----------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* ----------- Navbar ----------- */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: var(--accent-color) !important;
+}
+
+/* ----------- Carousel ----------- */
+.carousel-item img {
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.carousel-caption h5 {
+  background-color: rgba(0,0,0,0.6);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+/* ----------- Light/Dark Theme ----------- */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  background: #121212;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .carousel-caption h5 {
+  background-color: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* ----------- Buttons ----------- */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ----------- Form Styles ----------- */
+form input, form select, form textarea {
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+/* ----------- Cards ----------- */
+.card {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  border: none;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+/* Portfolio Page Styles */
+
+.portfolio-section {
+  padding: 4rem 2rem;
+  background-color: var(--bg-light);
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .portfolio-section {
+  background-color: var(--bg-dark);
+}
+
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.btn-update {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.btn-update:hover {
+  background-color: var(--secondary);
+}
+/* Smart Page Specific Styling */
+
+#greetingMessage {
+  color: var(--primary);
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+#hoverBox {
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#animateBtn {
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primary);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#animateBtn:hover {
+  background-color: var(--secondary);
+}
+
+#animatedBox {
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Dark mode overrides for Smart page */
+body.dark-mode #hoverBox {
+  background-color: #444;
+  color: #f8f9fa;
+}
+
+body.dark-mode #animatedBox {
+  background-color: #333;
+}
+/* Fun Page Background */
+body.fun-page {
+  background: url('images/image6.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+}
+
+body.fun-page .fun-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Dark mode override for fun page */
+body.dark-mode.fun-page {
+  background-color: #121212;
+  background-blend-mode: multiply;
+  color: #f1f1f1;
+}
